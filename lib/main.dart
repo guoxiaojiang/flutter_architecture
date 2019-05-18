@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:dio/dio.dart';
 
 void main() => runApp(MyApp());
 
@@ -102,10 +103,20 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+        onPressed: getHttp,
         tooltip: 'Increment',
         child: Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
+
+  void getHttp() async {
+    try {
+      Response response = await Dio().get("http://www.google.com");
+      print(response.data.toString());
+    } catch (e) {
+      print(e);
+    }
+  }
+
 }

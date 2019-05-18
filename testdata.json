@@ -1,0 +1,71 @@
+{
+  "result": 0,
+  "citys": [
+    {
+      "citysName": "太原市"
+    },
+    {
+      "citysName": "大同市"
+    },
+    {
+      "citysName": "朔州市"
+    },
+    {
+      "citysName": "阳泉市"
+    },
+    {
+      "citysName": "长治市"
+    },
+    {
+      "citysName": "晋城市"
+    },
+    {
+      "citysName": "忻州市"
+    },
+    {
+      "citysName": "吕梁市"
+    },
+    {
+      "citysName": "晋中市"
+    },
+    {
+      "citysName": "临汾市"
+    },
+    {
+      "citysName": "运城市"
+    },
+    {
+      "citysName": "古交市"
+    },
+    {
+      "citysName": "潞城市"
+    },
+    {
+      "citysName": "高平市"
+    },
+    {
+      "citysName": "原平市"
+    },
+    {
+      "citysName": "孝义市"
+    },
+    {
+      "citysName": "汾阳市"
+    },
+    {
+      "citysName": "介休市"
+    },
+    {
+      "citysName": "侯马市"
+    },
+    {
+      "citysName": "霍州市"
+    },
+    {
+      "citysName": "永济市"
+    },
+    {
+      "citysName": "河津市"
+    }
+  ]
+}
