@@ -21,3 +21,7 @@ This demo will show the flutter state-update architectures by the flowing points
 - Scoped Model
 - BLoC
 - Provider
+
+See the detail:
+
+[Flutter初体验和应用架构浅析](http://guoyoyo.tech/2019/05/18/flutter_architecture/)
