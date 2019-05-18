@@ -1,5 +1,12 @@
+import 'dart:convert';
+
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:dio/dio.dart';
+import 'package:flutter_architecture/page/set_state_page.dart';
+
+import 'data/city.dart';
+import 'data/repository.dart';
 
 void main() => runApp(MyApp());
 
@@ -45,19 +52,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -92,31 +86,53 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
+            Container(
+              child: CupertinoButton(
+                  child: const Text("SetState"),
+                  color: Colors.blue,
+                  pressedOpacity: 0.5,
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => SetStatePage(Repository())));
+                  }),
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.display1,
+            Container(
+              padding: const EdgeInsets.only(top: 20.0),
+              child: CupertinoButton(
+                child: const Text("Scoped Model"),
+                color: Colors.blue,
+                pressedOpacity: 0.5,
+                onPressed: () {},
+              ),
+            ),
+            Container(
+              padding: const EdgeInsets.only(top: 20.0),
+              child: CupertinoButton(
+                child: const Text("BLoC"),
+                color: Colors.blue,
+                pressedOpacity: 0.5,
+                onPressed: () {},
+              ),
+            ),
+            Container(
+              padding: const EdgeInsets.only(top: 20.0),
+              child: CupertinoButton(
+                child: const Text("Provider"),
+                color: Colors.blue,
+                pressedOpacity: 0.5,
+                onPressed: () {},
+              ),
             ),
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: getHttp,
+        onPressed: () {},
         tooltip: 'Increment',
         child: Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
-
-  void getHttp() async {
-    try {
-      Response response = await Dio().get("http://www.google.com");
-      print(response.data.toString());
-    } catch (e) {
-      print(e);
-    }
-  }
-
 }
