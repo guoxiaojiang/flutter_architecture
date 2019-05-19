@@ -69,6 +69,9 @@ class _SetStatePageState extends State<SetStatePage> {
       child: RaisedButton(
         child: const Text('Load cities data'),
         onPressed: () {
+          //凡是状态（数据）更新时，使用setState 通知当前_SetStatePageState
+          //_SetStatePageState的build会被重新执行
+          //所以SetStatePage当前所有的Widget都会被重绘
           setState(() {
             _isLoading = true;
           });
