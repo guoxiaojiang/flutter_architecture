@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter_architecture/page/bloc/bloc_page.dart';
+import 'package:flutter_architecture/page/provider/provider_page.dart';
 import 'package:flutter_architecture/page/scoped_model/scoped_model_page.dart';
 import 'package:flutter_architecture/page/set_state/set_state_page.dart';
 
@@ -120,10 +121,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: const Text("BLoC"),
                 color: Colors.blue,
                 pressedOpacity: 0.5,
-                onPressed: () { Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => BlocPage(Repository())));},
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => BlocPage(Repository())));
+                },
               ),
             ),
             Container(
@@ -132,7 +135,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: const Text("Provider"),
                 color: Colors.blue,
                 pressedOpacity: 0.5,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => ProviderPage(Repository())));
+                },
               ),
             ),
           ],
